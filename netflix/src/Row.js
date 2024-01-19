@@ -11,8 +11,8 @@ function Row({ title, fetchUrl }) {
   //if [], run once when th row loads, and dont run again.
   //if Array is empty load the condition once but when there is a parameter for example " movie" load when movie changes.
   async function fetchData() {
-    const request = await axios.get(fetchUrl);
-    console.log(request);
+    const requests = await axios.get(fetchUrl);
+    console.log(requests);
   }
   fetchData();
   return (

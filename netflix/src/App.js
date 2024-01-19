@@ -1,6 +1,6 @@
 import "./App.css";
 import Row from "./Row";
-import requests from "./request";
+import requests from "./requests";
 
 function App() {
   return (
