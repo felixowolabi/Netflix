@@ -13,6 +13,7 @@ function Row({ title, fetchUrl }) {
   async function fetchData() {
     const requests = await axios.get(fetchUrl);
     console.log(requests);
+    return requests;
   }
   fetchData();
   return (
