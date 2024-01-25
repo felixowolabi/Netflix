@@ -13,8 +13,8 @@ function Row({ title, fetchUrl }) {
   async function fetchData() {
     const requests = await axios
       .get(fetchUrl)
-      .then((response) => {
-        console.log(response.data);
+      .then((requests) => {
+        console.log(requests);
       })
       .catch((error) => {
         console.error(error);
