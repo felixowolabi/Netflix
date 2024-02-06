@@ -1,11 +1,14 @@
 import React from "react";
 import react, { useState, useEffect } from "react";
 import axios from "./axios";
+import "./Row.css";
+
+const base_url = "https://image.tmdb.org/t/p/original/";
 
 // you can only have one default export in a file
 //fetchUrl was pass in the function below as a prop
 function Row({ title, fetchUrl }) {
-  const [movie, setMovies] = useState([]);
+  const [Movies, setMovies] = useState([]);
   // A snippet of code which runs based on a specific condition /variable
   useEffect(() => {
     //if [], run once when th row loads, and dont run again.
@@ -18,10 +21,15 @@ function Row({ title, fetchUrl }) {
 
     fetchData();
   }, [fetchUrl]);
-  console.log(setMovies);
+  console.table(Movies);
   return (
-    <div>
+    <div className="row__posters">
       <h2> {title}</h2>
+      <div className="row__poster">
+        {Movies.map((movie) => (
+          <img src={`${base_url}${movie.poster_path}`} alt={movie.name} />
+        ))}
+      </div>
       {/*container -> posters*/}
     </div>
   );
