@@ -5,7 +5,7 @@
 }
 
 .row__poster {
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
   max-height: 100px;
   margin-right: 10px;
