@@ -9,6 +9,9 @@
   padding: 20px;
 }
 
+.title {
+  padding-left: 20px;
+}
 .row__posters::-webkit-scrollbar {
   display: none;
 }
